@@ -1,0 +1,25 @@
+<%= render "navbar" %>
+<div class="container mt-4">
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <div class="col-md-4 mb-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title"><%= flat.name %></h5>
+              <p class="card-text mb-1"><%= flat.address %></p>
+              <p class="card-text d-flex align-items-center mb-2">
+                <span class="me-2">
+                  <i class="bi bi-people-fill"></i> <%= flat.number_of_guests %>
+                </span>
+                <span>
+                  <i class="bi bi-currency-euro"></i> <%= flat.price_per_night %>
+                </span>
+              </p>
+              <a href="#" class="btn btn-link">More info</a>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+
+</div>
